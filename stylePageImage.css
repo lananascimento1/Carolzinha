@@ -1,61 +1,78 @@
-/* Resetando alguns estilos padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilizando o corpo da página */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f7f7f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
+    background-color: #fffafc;
+    color: #333;
     padding: 20px;
 }
 
 .container {
-    max-width: 1000px;
-    width: 100%;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #b30059;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .card {
-    background-color: #e4e4e4;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    text-align: center;
-    padding: 10px;
-}
-
-.card img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
+    background-color: #ffe6f0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: calc(33.333% - 20px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: transform 0.3s ease;
 }
 
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 .message {
-    font-size: 16px;
-    color: #333;
-    margin-top: 10px;
-    font-style: italic;
-    padding: 10px 10px;
+    font-size: 1rem;
+    color: #4d004d;
+}
+
+/* Estilos para dispositivos menores (celulares) */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .message {
+        font-size: 0.95rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
 }
